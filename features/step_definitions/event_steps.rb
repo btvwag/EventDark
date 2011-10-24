@@ -1,8 +1,9 @@
 Given /^I am on the event creation page$/ do
-  visit new_event_url
+  visit new_event_path
 end
 
 When /^I create the following event:$/ do |table|
+  save_and_open_page
   table.rows_hash.each do |field, value|
     fill_in field, :with => value
   end

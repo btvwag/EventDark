@@ -18,4 +18,5 @@ group :development, :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'pry' #debugger & console
+  gem 'launchy' #save_and_open_page
 end

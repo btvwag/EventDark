@@ -17,6 +17,7 @@ Feature: Create Event
     And I should be given a link to share
 
   Scenario: Fail to create event (invalid)
+    When I create the following event:
       | Name          | BTVWAG BDD/TDD                |
       | Location      | Draker Labs                   |
       | Time          | October 26th 2011, 6:30PM EST |
