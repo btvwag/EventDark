@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
-
+gem 'rake', '0.8.7'
 gem 'mysql2'
 
 # Gems used only for assets and not required
@@ -16,8 +16,6 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'pry' #debugger & console
 end
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
