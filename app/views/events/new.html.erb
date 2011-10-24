@@ -1,0 +1,13 @@
+<h1>New Event</h1>
+
+<%= semantic_form_for @event do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :location %>
+    <%= f.input :start, :label => 'Time', :as => :string %>
+    <%= f.input :max_attendees %>
+  <% end %>
+  <%= f.buttons do %>
+    <%= f.commit_button 'Submit' %>
+  <% end %>
+<% end %>

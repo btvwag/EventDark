@@ -12,7 +12,7 @@ Feature: Create Event
       | Name          | BTVWAG BDD/TDD                |
       | Location      | Draker Labs                   |
       | Time          | October 26th 2011, 6:30PM EST |
-      | Max Attendees | 20                            |
+      | Max attendees | 20                            |
     Then I should be notified that my event was successfully created
     And I should be given a link to share
 
@@ -21,6 +21,6 @@ Feature: Create Event
       | Name          | BTVWAG BDD/TDD                |
       | Location      | Draker Labs                   |
       | Time          | October 26th 2011, 6:30PM EST |
-      | Max Attendees |                               |
+      | Max attendees |                               |
     Then I should be notified that my event was not created
     And I should see the problem with the form
