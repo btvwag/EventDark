@@ -3,8 +3,10 @@ Given /^I am on the event creation page$/ do
 end
 
 When /^I create the following event:$/ do |table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
+  table.rows_hash.each do |field, value|
+    fill_in field, :with => value
+  end
+  click_on 'Submit'
 end
 
 Then /^I should be notified that my event was successfully created$/ do
