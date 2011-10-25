@@ -9,16 +9,14 @@ When /^I create the following event:$/ do |table|
   click_on 'Submit'
 end
 
-Then /^I should be notified that my event was successfully created$/ do
-  pending # express the regexp above with the code you wish you had
+Then /^I should be notified that my "([^"]*)" was (successfully|not) (created|saved|deleted)$/ do |object, status, action|
+  klass = (status == 'successfully' ? 'notice' : 'warning')
+  page.should have_selector(".flash.#{klass}")
+  page.find('.flash').should have_content(object)
 end
 
 Then /^I should be given a link to share$/ do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should be notified that my event was not created$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content('Share this event:')
 end
 
 Then /^I should see the problem with the form$/ do
