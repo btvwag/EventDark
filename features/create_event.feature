@@ -1,4 +1,3 @@
-@wip
 Feature: Create Event
   As an event host
   I want to create an event page

@@ -20,5 +20,5 @@ Then /^I should be given a link to share$/ do
 end
 
 Then /^I should see the problem with the form$/ do
-  pending # express the regexp above with the code you wish you had
+  page.find('p.inline-errors').should have_content('blank')
 end
